@@ -199,6 +199,25 @@ The example illustrates the response structure; the actual answer and sources wi
 5. Generate an answer from the relevant context, or return a fallback if no relevant documents are found.
 6. Return the answer and source URLs through the API.
 
+### Workflow Diagram
+
+```mermaid
+flowchart TD
+    A["User submits a question"] --> B["Analyze question"]
+    B --> C["Retrieve up to 8 chunks from ChromaDB"]
+    C --> D["Grade document relevance with the LLM"]
+
+    D --> E{"Any relevant documents?"}
+    E -- "Yes" --> F["Generate answer from relevant context"]
+    F --> G["Return answer and source URLs through FastAPI"]
+
+    E -- "No" --> H{"Retry limit reached?"}
+    H -- "No" --> I["Rewrite the question"]
+    I --> C
+    H -- "Yes" --> J["Return fallback response"]
+    J --> G
+```
+
 The workflow is implemented in `app/graph/workflow.py`, with the individual processing steps in `app/graph/nodes.py`.
 
 ## Testing
