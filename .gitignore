@@ -1,0 +1,36 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python environments
+ragt/
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and operating system
+.vscode/
+.DS_Store
+
+# Generated vector databases and backups
+chroma_db/
+chroma_db_backup*/
+*.sqlite3
+
+# Local documents and logs
+documents/*
+!documents/.gitkeep
+*.log

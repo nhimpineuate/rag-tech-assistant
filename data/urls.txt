@@ -1,0 +1,6 @@
+https://docs.langchain.com/oss/python/langgraph/agentic-rag
+https://blog.langchain.com/agentic-rag-with-langgraph/
+https://docs.langchain.com/oss/python/integrations/text_embedding
+https://docs.langchain.com/oss/python/integrations/vectorstores
+https://docs.langchain.com/oss/python/langchain/overview
+https://futuresmart.ai/blog/langgraph-rag-agent-tutorial-basics-to-advanced-multi-agent-ai-chatbot
